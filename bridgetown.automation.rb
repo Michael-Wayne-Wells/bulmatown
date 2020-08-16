@@ -70,7 +70,8 @@ if yes? "The Bulmatown installer can update styles, layouts, and page templates 
   copy_file "example/src/_layouts/post.html", "src/_layouts/post.html"
 
 
-  gsub_file "src/_layouts/default.html", '{% render "footer", ', '{% render "footer", url: site.url, '
+
+  gsub_file "src/_layouts/default.liquid", '{% render "footer", ', '{% render "footer", url: site.url, '
 
   copy_file "example/src/index.md", "src/index.md"
   copy_file "example/src/posts.md", "src/posts.md"
